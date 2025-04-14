@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+/head>
+<meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All things sports</title>
+</head>
+<body>
+<!-- Header of the website -->
+<header>
+   <h1>Welcome to All things sports</h1>
+  
+   <div class="navbar">
+       <a href="index1.html">BHome</a>
+       <a href="Aboutus.html">About us</a>
+       <a href="All thing sports.html">All things sports </a>
+       <a href="materialize.html">Materialize</a>
+       <a href="News.html">News</a>
+         <a href="Contactus.html">Contact</a>
+       <a href="jquery.html">JQuery</a>
+   </div>
+
+
+</header>
+<body>
+</body>
+</html>
+<h1>🏀 Sports Interactive Page</h1>
+
+  
+  <div class="box">
+    <h2>Team Roster</h2>
+    <button id="toggleRoster">Show/Hide Players</button>
+    <ul id="rosterList" style="display: none;">
+      <li>LeBron James</li>
+      <li>Stephen Curry</li>
+      <li>Kevin Durant</li>
+      <li>Giannis Antetokounmpo</li>
+    </ul>
+  </div>
+
+
+  <div class="box">
+    <h2>Game Stats</h2>
+    <button id="statsBtn">Show/Hide Stats</button>
+    <div id="stats" style="display: none;">
+      <p>Score: 102 - 98</p>
+      <p>Rebounds: 45</p>
+      <p>Assists: 28</p>
+    </div>
+  </div>
+
+
+  <div class="box" id="animateBox">
+    <h2>🏈 Touchdown Animation</h2>
+    <button id="animateBtn">Celebrate!</button>
+    <p id="celebrationText">Let's go!</p>
+  </div>
+
+  <script>
+    // Toggle roster
+    $('#toggleRoster').click(function () {
+      $('#rosterList').slideToggle();
+    });
+
+    // Fade in/out stats
+    $('#statsBtn').click(function () {
+      $('#stats').fadeToggle();
+    });
+
+    // Animate celebration
+    $('#animateBtn').click(function () {
+      $('#animateBox').animate({
+        marginLeft: '+=100px',
+        opacity: 0.7
+      }, 500).animate({
+        marginLeft: '-=100px',
+        opacity: 1
+      }, 500);
+
+      $('#celebrationText').text('Touchdown!!! 🎉').fadeOut(400).fadeIn(400);
+    });
+  </script>
+
+</body>
+</html>
