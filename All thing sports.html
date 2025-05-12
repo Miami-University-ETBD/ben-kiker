@@ -1,0 +1,96 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Things Sports</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body onload="displayGreeting()" class="blue lighten-5">
+
+    <header class="blue darken-3 white-text center-align">
+        <h1>Welcome to All Things Sports</h1>
+        <h2>Your Number One Source for Sports News</h2>
+    </header>
+
+    <nav class="blue darken-2">
+        <div class="nav-wrapper container">
+            <ul class="left">
+                <li><a href="index1.html" class="white-text">Home</a></li>
+                <li><a href="news.html" class="white-text">News</a></li>
+                <li><a href="contactus.html" class="white-text">Contact</a></li>
+                <li><a href="materialize.html" class="white-text">materialize</a></li>
+                <li><a href="Aboutus.html" class="white-text">Aboutus</a></li>
+                <li><a href="bootstrap.html" class="white-text">Bootstrap</a></li>
+                <li><a href="Jquery.html" class="white-text">JQuery</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <p class="flow-text"><b>Here at ATS</b>, our goal is to bring people together, create unforgettable moments, and showcase incredible talent through sports. Whether you're a fan of <u>basketball</u>, <u>baseball</u>, or <u>football</u>, this page is for you!</p>
+
+        <!-- Circular Image -->
+        <div class="center-align">
+            <img src="Images/Sportscircleimage.jpg" alt="Sports Banner" class="circle responsive-img">
+        </div>
+
+        <ul class="collection">
+            <li class="collection-item"><b>Latest Sports Updates</b> - Live action updates quicker than any other website.</li>
+            <li class="collection-item"><b>Upcoming Events</b> - Don't miss another event again! Our site will update you with all the upcoming games.</li>
+            <li class="collection-item"><b>Player Spotlights</b> - Get the best highlights and player spotlights so you never miss the action!</li>
+            <li class="collection-item"><b>Game Highlights</b> - Rewatch all your favorite past and present highlights in one place!</li>
+        </ul>
+
+        <p>We have partnered with <a href="https://www.espn.com" target="_blank">ESPN</a> to bring you the most reliable sports updates.</p>
+
+        <!-- Embedded Video -->
+        <div class="video-container">
+            <iframe width="853" height="480" src="Images/Sportsvideo.mp4" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <h3>Check out the best teams of the year!</h3>
+        <table class="highlight responsive-table">
+            <thead>
+                <tr>
+                    <th>Sport</th>
+                    <th>Top Team</th>
+                    <th>Star Player</th>
+                    <th>Record</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Basketball</td>
+                    <td>Oklahoma City Thunder</td>
+                    <td>Shai Gilgeous-Alexander</td>
+                    <td>44-10</td>
+                </tr>
+                <tr>
+                    <td>Baseball</td>
+                    <td>Los Angeles Dodgers</td>
+                    <td>Shohei Ohtani</td>
+                    <td>98-64</td>
+                </tr>
+                <tr>
+                    <td>Football</td>
+                    <td>Kansas City Chiefs</td>
+                    <td>Patrick Mahomes</td>
+                    <td>15-2</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="blue darken-3 white-text center-align">
+        <p>&copy; <span id="year"></span> All Things Sports - All Rights Reserved</p>
+    </footer>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

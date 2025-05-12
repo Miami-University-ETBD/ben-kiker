@@ -1,0 +1,104 @@
+<script>
+  // Initialize modal
+  document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+  });
+
+
+  // Function to display selected Sport
+  function displaySports() {
+      const selectedsports = document.querySelector('input[name="sports"]:checked').value;
+      document.getElementById('sport-response').innerText = `You selected: ${Baseball}`;
+  }
+  // Function to handle email subscription form submission
+  function submitEmail(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      document.getElementById('email-response').innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+      document.getElementById('email').value = ''; // Clear the input
+
+
+      // Display modal
+      const modalText = document.getElementById('modal-content-text');
+      modalText.innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+      const modal = M.Modal.getInstance(document.getElementById('modal1'));
+      modal.open();
+  }
+</script>
+
+<div id="radio-section" class="section container">
+  <h2>Select Your Favorite sport</h2>
+  <form>
+      <p>
+          <label>
+              <input name="Sport" type="radio" value="Baseball" onclick="displayPastry()"/>
+              <span>Baseball</span>
+          </label>
+      </p>
+      <p>
+          <label>
+              <input name="Sport" type="radio" value="Basketball" onclick="displaySports()"/>
+              <span>Basketball</span>
+          </label>
+      </p>
+      <p>
+          <label>
+              <input name="Sport" type="radio" value="Football" onclick="displaySports()"/>
+              <span>Football</span>
+          </label>
+      </p>
+  </form>
+  <div id="sport-response"></div>
+</div>
+
+
+
+<!-- Email Feedback Section -->
+<div id="feedback-section" class="section container">
+  <h2>Subscribe for Updates</h2>
+  <form onsubmit="submitEmail(event)">
+      <div class="input-field">
+          <input id="email" type="email" required>
+          <label for="email">Email</label>
+      </div>
+      <button type="submit" class="btn waves-effect waves-light">Subscribe</button>
+  </form>
+  <div id="email-response"></div>
+</div>
+<div id="modal1" class="modal">
+<div class="modal-content">
+  <h4>Check Your email-response</h4>
+  <p id="modal-content-text"></p>
+</div>
+<div class="modal-footer">
+  <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+    >Close</a
+  >
+</div>
+</div>
+<h4>Top Sports Highlights</h4>
+  <div class="carousel">
+    <a class="carousel-item" href="#one"><img src="Images/highlight1" alt="Highlight 1"></a>
+    <a class="carousel-item" href="#two"><img src="Images/Highlight2" alt="Highlight 2"></a>
+    <a class="carousel-item" href="#three"><img src="Images/highlight3" alt="Highlight 3"></a>
+  </div>
+  <h4>What You'll Find</h4>
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">update</i>Latest Sports Updates</div>
+      <div class="collapsible-body"><span>Live action updates quicker than any other website.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">event</i>Upcoming Events</div>
+      <div class="collapsible-body"><span>Don't miss another event again! Stay up to date with upcoming games.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">star</i>Player Spotlights</div>
+      <div class="collapsible-body"><span>Highlights and stories of top athletes in the spotlight!</span></div>
+    </li>
+     <!-- Materialize JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+    </html>
+  </ul>
